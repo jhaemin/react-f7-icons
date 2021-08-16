@@ -8,10 +8,10 @@
     "start": "next start"
   },
   "dependencies": {
-    "f7-icons-react": "*",
     "framework7-icons": "^5.0.3",
     "next": "11.1.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-f7-icons": "*"
   }
 }

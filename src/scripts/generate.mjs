@@ -39,7 +39,10 @@ svgFileNames.forEach((svgFileName) => {
   const iconComponentName = pascalCase(svgFileName.replace(/.svg$/g, ''))
   const svgFile = fs
     .readFileSync(path.join(svgDirName, svgFileName), 'utf8')
-    .replace('<svg', '<svg style={{ fill }}')
+    .replace('<svg', '<svg className={className} style={style} fill={fill}')
+    .replace(/width=".*?"/g, 'width="auto"')
+    .replace(/height=".*?"/g, 'height={size ?? "1em"}')
+
   const iconComponentNameReg = new RegExp('{{// ICON_COMPONENT_NAME //}}', 'gi')
   const componentFile = iconTemplateComponent
     .replace('{{// SVG_DATA //}}', svgFile)
