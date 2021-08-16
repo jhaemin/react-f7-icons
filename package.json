@@ -12,7 +12,7 @@
   "author": "Jang Haemin",
   "license": "MIT",
   "peerDependencies": {
-    "react": "*"
+    "react": ">=16.0.0"
   },
   "devDependencies": {
     "@types/fs-extra": "^9.0.12",
