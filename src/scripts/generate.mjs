@@ -42,6 +42,7 @@ svgFileNames.forEach((svgFileName) => {
     .replace('<svg', '<svg className={className} style={style} fill={fill}')
     .replace(/width=".*?"/g, '')
     .replace(/height=".*?"/g, 'height={size ?? "1em"}')
+    .replace('fill-rule', 'fillRule')
 
   const iconComponentNameReg = new RegExp('{{// ICON_COMPONENT_NAME //}}', 'gi')
   const componentFile = iconTemplateComponent
@@ -55,6 +56,11 @@ svgFileNames.forEach((svgFileName) => {
 })
 
 const iconNames = svgFileNames.map((name) => `'${name.replace(/.svg$/g, '')}'`)
+
+fs.writeFileSync(
+  path.join(projectRootDir, '/test/icon-names.ts'),
+  `export const iconNames = [${iconNames.join(', ')}]`
+)
 
 const generatedTypesFile = `export type F7IconName = ${iconNames.join(' | ')}`
 
