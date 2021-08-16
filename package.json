@@ -1,13 +1,13 @@
 {
   "name": "react-f7-icons",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.3",
   "description": "",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
     "clone-f7-icons": "rimraf f7-icons && git clone https://github.com/framework7io/framework7-icons.git f7-icons",
     "generate": "node src/scripts/generate.mjs",
-    "build": "rimraf dist && tsc && cp package.json dist/package.json"
+    "build": "npm run generate && rimraf dist && tsc && cp package.json dist/package.json && cp README.md dist/README.md"
   },
   "author": "Jang Haemin",
   "license": "MIT",

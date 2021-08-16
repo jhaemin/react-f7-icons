@@ -15,7 +15,7 @@ export default function Home() {
       <div>
         {/* <F7Icon name="ant" fill="red" /> */}
         <Heart fill="red" width="2em" height="2em" />
-        <F7Icon name="heart" fill="blue" />
+        <F7Icon name="heart" fill="blue" className="hello" size="3em" />
       </div>
     </div>
   )
