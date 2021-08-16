@@ -66,9 +66,10 @@ const iconsMapImport = iconNames
   .join('\n')
 const iconsMapFile = `${iconsMapImport}
 import type { F7IconName } from './types'
+import type { IconProps } from '../types'
 import React from 'react'
 
-const iconsMap: Record<F7IconName, React.FC> = { ${iconNames
+const iconsMap: Record<F7IconName, React.FC<IconProps>> = { ${iconNames
   .map((name) => `${name}: ${pascalCase(name)}`)
   .join(',\n')} }
 

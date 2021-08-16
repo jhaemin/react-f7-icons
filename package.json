@@ -1,15 +1,19 @@
 {
-  "name": "f7-svg-icons-react",
-  "version": "1.0.0",
+  "name": "f7-icons-react",
+  "version": "1.0.0-beta.0",
   "description": "",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "clone-f7-icons": "rimraf f7-icons && git clone https://github.com/framework7io/framework7-icons.git f7-icons",
-    "generate": "npm run clone-f7-icons && node src/scripts/generate.mjs",
-    "build": "tsc"
+    "generate": "node src/scripts/generate.mjs",
+    "build": "rimraf dist && tsc && cp package.json dist/package.json"
   },
   "author": "Jang Haemin",
   "license": "MIT",
+  "peerDependencies": {
+    "react": "*"
+  },
   "devDependencies": {
     "@types/fs-extra": "^9.0.12",
     "@types/node": "^16.6.1",
