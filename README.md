@@ -4,6 +4,8 @@
 
 <h3 align="center">A React SVG components library of <a href="https://github.com/framework7io/framework7-icons">Framework7 Icons</a></h3>
 
+---
+
 ```zsh
 > npm install react-f7-icons
 ```
@@ -20,18 +22,18 @@ export default function Component() {
 }
 ```
 
-### [📚 Icon References]()
-
 ## Props
 
-### `name`
+### `name: IconName`
 
-### `size`
+Name of the icon.
 
-### `fill`
+[📚 Full list of icons]()
 
-## How does it work?
+### `size?: string`
 
-## RF7I vs [official SVG components](https://github.com/framework7io/framework7-icons#svg-components)
+Height of the icon.
 
-Framework7 Icons officially support React SVG components as well as for other frontend frameworks including Vue and Svelte.
+### `fill?: string`
+
+Color of the icon. Any CSS color value is
