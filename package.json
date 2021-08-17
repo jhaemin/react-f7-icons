@@ -1,6 +1,6 @@
 {
   "name": "react-f7-icons",
-  "version": "1.0.0-beta.6",
+  "version": "1.0.0",
   "description": "A React SVG components library of Framework7 Icons",
   "main": "index.js",
   "types": "index.d.ts",
