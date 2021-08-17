@@ -4,13 +4,22 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export && touch out/.nojekyll && mkdir out/react-f7-icons && mv out/_next out/react-f7-icons/_next",
     "start": "next start"
   },
   "dependencies": {
+    "copy-to-clipboard": "^3.3.1",
     "framework7-icons": "^5.0.3",
     "next": "11.1.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-f7-icons": "^1.0.0-beta.6",
+    "recoil": "^0.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.6.1",
+    "@types/react": "^17.0.18",
+    "@types/react-dom": "^17.0.9",
+    "typescript": "^4.3.5"
   }
 }

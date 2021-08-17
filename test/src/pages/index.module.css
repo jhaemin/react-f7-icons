@@ -1,0 +1,61 @@
+.page {
+  padding: 4rem 1.4rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.title {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.social {
+  margin-top: 3rem;
+}
+
+.gitHubLink {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.gitHubLogo {
+  margin-right: 0.4rem;
+}
+
+.options {
+  margin-top: 2rem;
+}
+
+.options label {
+  margin-left: 0.4rem;
+  user-select: none;
+}
+
+.iconsContainer {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+  gap: 4rem 0;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 2rem;
+  cursor: pointer;
+}
+
+.name {
+  font-size: 0.6rem;
+  margin-top: 1rem;
+  width: 100%;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  text-align: center;
+}
