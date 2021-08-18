@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && touch out/.nojekyll && mkdir out/react-f7-icons && mv out/_next out/react-f7-icons/_next",
+    "build": "next build && next export && touch out/.nojekyll",
     "start": "next start"
   },
   "dependencies": {
