@@ -28,7 +28,7 @@ export default function Component() {
 
 Name of the icon.
 
-[📚 Full list of icons]()
+[📚 Full list of icons](https://jhaemin.github.io/react-f7-icons)
 
 ### `size?: string`
 
