@@ -7,7 +7,8 @@
   "scripts": {
     "clone-f7-icons": "rimraf f7-icons && git clone https://github.com/framework7io/framework7-icons.git f7-icons",
     "generate": "node src/scripts/generate.mjs",
-    "build": "npm run generate && rimraf dist && tsc && cp package.json dist/package.json && cp README.md dist/README.md"
+    "build": "npm run generate && rimraf dist && tsc && cp package.json dist/package.json && cp README.md dist/README.md",
+    "deploy": "gh-pages -d test/out --dotfiles"
   },
   "author": "Jang Haemin",
   "license": "MIT",
@@ -20,6 +21,7 @@
     "@types/react": "^17.0.18",
     "change-case": "^4.1.2",
     "fs-extra": "^10.0.0",
+    "gh-pages": "^3.2.3",
     "rimraf": "^3.0.2",
     "typescript": "^4.3.5"
   }
