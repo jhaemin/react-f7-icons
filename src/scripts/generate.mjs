@@ -57,32 +57,21 @@ svgFileNames.forEach((svgFileName) => {
 
 const iconNames = svgFileNames.map((name) => `'${name.replace(/.svg$/g, '')}'`)
 
-fs.writeFileSync(
-  path.join(projectRootDir, '/test/icon-names.ts'),
-  `export const iconNames = [${iconNames.join(', ')}]`
-)
+// fs.writeFileSync(
+//   path.join(projectRootDir, '/test/icon-names.ts'),
+//   `export const iconNames = [${iconNames.join(', ')}]`
+// )
 
-const generatedTypesFile = `export type F7IconName = ${iconNames.join(' | ')}`
+// const generatedTypesFile = `export type F7IconName = ${iconNames.join(' | ')}`
 
-fs.writeFileSync(path.join(generatedDir, '/types.ts'), generatedTypesFile)
+// fs.writeFileSync(path.join(generatedDir, '/types.ts'), generatedTypesFile)
 
-const iconsMapImport = iconNames
+const iconsMapExports = iconNames
   .map((name) => {
     const componentName = pascalCase(name)
 
-    return `import ${componentName} from './components/${componentName}'`
+    return `export { default as ${componentName} } from './components/${componentName}'`
   })
   .join('\n')
-const iconsMapFile = `${iconsMapImport}
-import type { F7IconName } from './types'
-import type { IconProps } from '../types'
-import React from 'react'
 
-const iconsMap: Record<F7IconName, React.FC<IconProps>> = { ${iconNames
-  .map((name) => `${name}: ${pascalCase(name)}`)
-  .join(',\n')} }
-
-export default iconsMap
-`
-
-fs.writeFileSync(path.join(generatedDir, '/icons-map.ts'), iconsMapFile)
+fs.writeFileSync(path.join(generatedDir, '/index.ts'), iconsMapExports)
