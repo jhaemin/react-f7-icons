@@ -1,13 +1,13 @@
 {
   "name": "react-f7-icons",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0-beta.4",
   "description": "A React SVG components library of Framework7 Icons",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
     "clone-f7-icons": "rimraf f7-icons && git clone https://github.com/framework7io/framework7-icons.git f7-icons",
     "generate": "node src/scripts/generate.mjs",
-    "build": "npm run generate && rimraf dist && tsc && cp package.json dist/package.json && cp README.md dist/README.md",
+    "build": "npm run generate && rimraf dist && tsc && cp package.json dist/package.json && cp README.md dist/README.md && babel dist --out-dir dist",
     "deploy-website": "gh-pages -d test/out --dotfiles"
   },
   "author": "Jang Haemin",
@@ -16,6 +16,9 @@
     "react": ">=16.0.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
     "@types/fs-extra": "^9.0.12",
     "@types/node": "^16.6.1",
     "@types/react": "^17.0.18",
